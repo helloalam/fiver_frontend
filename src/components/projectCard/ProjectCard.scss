@@ -1,0 +1,73 @@
+.projectCard {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgb(225, 225, 225);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .texts {
+      h2 {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 0.875rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  // Responsive for smaller screens
+  @media (max-width: 768px) {
+    max-width: 100%;
+    img {
+      max-height: 150px;
+    }
+
+    .info {
+      padding: 10px;
+      gap: 10px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .texts {
+        h2 {
+          font-size: 0.95rem;
+        }
+
+        span {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

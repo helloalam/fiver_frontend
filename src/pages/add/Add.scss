@@ -1,0 +1,192 @@
+.add {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 50px 20px;
+
+    h1 {
+      width: max-content;
+      margin-bottom: 30px;
+      color: gray;
+      font-weight: 300;
+      font-size: 28px;
+    }
+
+    .sections {
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+
+      label {
+        color: gray;
+        font-size: 18px;
+      }
+
+      .info,
+      .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input,
+        select,
+        textarea {
+          padding: 16px;
+          font-size: 16px;
+          width: 100%;
+        }
+
+        .images {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 20px;
+
+          .imagesInputs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+          }
+        }
+
+        button {
+          border: none;
+          padding: 16px;
+          color: white;
+          font-weight: 500;
+          font-size: 16px;
+          background-color: #1dbf73;
+          cursor: pointer;
+          width: fit-content;
+        }
+
+        .add {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 10px;
+
+          input {
+            flex: 1;
+            min-width: 200px;
+          }
+        }
+
+        .addedFeatures {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+
+          button {
+            height: 32px;
+            font-size: 12px;
+            font-weight: 400;
+            background: transparent;
+            color: red;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // 🔻 Responsive styles
+  @media (max-width: 1024px) {
+    .container {
+      padding: 40px 20px;
+
+      .sections {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      h1 {
+        font-size: 24px;
+      }
+
+      .sections {
+        gap: 30px;
+      }
+
+      .info,
+      .details {
+        input,
+        select,
+        textarea {
+          padding: 14px;
+          font-size: 15px;
+        }
+
+        button {
+          font-size: 15px;
+          padding: 14px;
+        }
+
+        .addedFeatures button {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 30px 15px;
+
+      h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 auto 25px auto;
+      }
+
+      .info,
+      .details {
+        gap: 12px;
+
+        input,
+        select,
+        textarea {
+          padding: 12px;
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 12px;
+          width: 100%;
+        }
+
+        .add {
+          flex-direction: column;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .addedFeatures {
+          flex-direction: column;
+          gap: 8px;
+
+          button {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
