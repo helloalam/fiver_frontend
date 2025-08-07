@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8800', // Your Express backend
+        target: 'https://fiverr-backend-54ww.onrender.com', // Your Express backend
         changeOrigin: true,
         secure: false,
       },
